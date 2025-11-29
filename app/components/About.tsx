@@ -85,7 +85,7 @@ export default function About() {
                 Currently pursuing my engineering degree at ESPRIT, I specialize in building modern, scalable cloud infrastructures using tools like Docker, Kubernetes, Terraform, OpenStack, Jenkins, and AWS.
               </p>
               <p>
-                I love turning complex problems into simple, beautiful, and efficient solutions. When I&apos;m not coding or deploying servers, you'll find me learning new technologies, automating everything, or sharing knowledge with the community.
+                I love turning complex problems into simple, beautiful, and efficient solutions. When I&apos;m not coding or deploying servers, you&apos;ll find me learning new technologies, automating everything, or sharing knowledge with the community.
               </p>
             </div>
           </motion.div>
