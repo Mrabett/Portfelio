@@ -129,7 +129,7 @@ export default function Education() {
                   2021 – 2024
                 </p>
                 <h3 className="text-4xl font-black text-white leading-tight">
-                  BACHELOR'S DEGREE IN<br />
+                  BACHELOR&apos;S DEGREE IN<br />
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                     COMPUTER SYSTEMS ENGINEERING
                   </span>

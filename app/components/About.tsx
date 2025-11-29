@@ -75,7 +75,7 @@ export default function About() {
             {/* Description */}
             <div className="space-y-6 text-lg text-gray-300">
               <p>
-                Hello! I'm <span className="text-cyan-400 font-bold">Hedi Mrabet</span>, a passionate{" "}
+                Hello! I&apos;m <span className="text-cyan-400 font-bold">Hedi Mrabet</span>, a passionate{" "}
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-bold">
                   Cloud Computing Engineer
                 </span>{" "}
@@ -85,7 +85,7 @@ export default function About() {
                 Currently pursuing my engineering degree at ESPRIT, I specialize in building modern, scalable cloud infrastructures using tools like Docker, Kubernetes, Terraform, OpenStack, Jenkins, and AWS.
               </p>
               <p>
-                I love turning complex problems into simple, beautiful, and efficient solutions. When I'm not coding or deploying servers, you'll find me learning new technologies, automating everything, or sharing knowledge with the community.
+                I love turning complex problems into simple, beautiful, and efficient solutions. When I&apos;m not coding or deploying servers, you'll find me learning new technologies, automating everything, or sharing knowledge with the community.
               </p>
             </div>
           </motion.div>

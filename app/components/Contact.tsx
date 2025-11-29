@@ -47,7 +47,7 @@ export default function Contact() {
 
             <div className="bg-gray-900/60 backdrop-blur-2xl border border-gray-700/50 rounded-3xl p-10 shadow-2xl">
               <p className="text-gray-300 mb-8 leading-relaxed">
-                If you have any questions or concerns, please don't hesitate to contact me.
+                If you have any questions or concerns, please don&apos;t hesitate to contact me.
                 I am open to any work opportunities that align with my skills and interests.
               </p>
 
