@@ -1,123 +1,128 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center py-20">
-      {/* Background Effects */}
-      <div className="absolute top-1/3 left-1/4 w-10 h-10 md:w-96 md:h-96 bg-purple-600/5 dark:bg-purple-600/10 rounded-full filter blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-10 h-10 md:w-80 md:h-80 bg-indigo-600/5 dark:bg-indigo-600/10 rounded-full filter blur-3xl animate-pulse delay-700" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      {/* Fond animé ultra doux */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-indigo-900/20" />
+        <motion.div
+          animate={{ scale: [1, 1.4, 1], rotate: [0, 90, 0] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="absolute -top-40 -left-40 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
+        />
+        <motion.div
+          animate={{ scale: [1.2, 1, 1.2], rotate: [0, -90, 0] }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+          className="absolute -bottom-40 -right-40 w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
+        />
+      </div>
 
-      {/* Main Content */}
-      <div className="container max-w-7xl mx-auto px-8 lg:px-12 relative z-10">
-        <div className="flex flex-col items-center lg:items-start">
-          {/* Content Section */}
+      <div className="container relative z-10 px-6 lg:px-12 mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+
+          {/* === Texte à gauche === */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="max-w-3xl text-center lg:text-left"
+            initial={{ opacity: 0, x: -80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="text-center lg:text-left space-y-8"
           >
-            {/* Pre-title */}
-            <motion.span
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3 }}
-              className="inline-block px-4 py-1.5 bg-purple-500/5 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 rounded-full text-sm font-medium mb-6"
-            >
-              Full Stack Developer
-            </motion.span>
-
-            <div className="space-y-4">
-              <h1 className="text-5xl lg:text-7xl font-bold text-gray-800 dark:text-white leading-tight">
-                Hi, I&apos;m{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">
-                  Arthur Morgan
-                </span>
-              </h1>
-            </div>
-
-            {/* Description */}
-            <p className="text-gray-600 dark:text-gray-300 text-lg lg:text-xl mt-8 mb-10 leading-relaxed max-w-2xl">
-              A passionate Full Stack Developer specializing in building
-              exceptional digital experiences that drive business growth and
-              user engagement.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-purple-500/25"
-              >
-                <span className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-                <span className="relative flex items-center justify-center gap-2">
-                  View Projects
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
-                </span>
-              </motion.button>
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group px-8 py-4 bg-transparent border border-purple-500/20 dark:border-purple-500/30 hover:border-purple-500 text-purple-600 dark:text-purple-400 rounded-xl transition-all duration-300 hover:bg-purple-500/5 dark:hover:bg-purple-500/10"
-              >
-                <span className="flex items-center justify-center gap-2">
-                  Contact Me
-                  <svg
-                    className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 12h14m-7-7l7 7-7 7"
-                    />
-                  </svg>
-                </span>
-              </motion.button>
-            </div>
-
-            {/* Social Proof */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="mt-12 flex items-center gap-8 justify-center lg:justify-start"
+              transition={{ delay: 0.3, duration: 0.9 }}
+              className="text-5xl md:text-7xl font-black text-white leading-tight"
             >
-              <div className="flex -space-x-3">
-                {[1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    className="w-10 h-10 rounded-full border-2 border-purple-500/20 dark:border-purple-500/30 bg-purple-500/5 dark:bg-purple-900/30"
-                  />
-                ))}
-              </div>
-              <div className="text-gray-500 dark:text-gray-400">
-                <span className="text-purple-600 dark:text-purple-400 font-semibold">
-                  50+
-                </span>{" "}
-                Projects Completed
-              </div>
+              Welcome,
+            </motion.h1>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.9 }}
+              className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+            >
+              I'm MRABET Hedi, <br />
+              a Cloud Computing Student | DevOps Enthusiast.
+            </motion.h2>
+
+            {/* BOUTONS FONCTIONNELS */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 0.8 }}
+              className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start pt-6"
+            >
+              {/* Contact Me → Scroll vers #contact */}
+              <Link
+                href="#contact"
+                scroll={true}
+                className="group relative px-8 py-4 bg-purple-600 text-white font-semibold rounded-2xl overflow-hidden transition-all duration-500 hover:bg-purple-700 text-center"
+              >
+                <span className="relative z-10">Contact Me</span>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: 0 }}
+                  transition={{ duration: 0.4 }}
+                />
+              </Link>
+
+              {/* Get Resume → Télécharge le CV */}
+              <a
+                href="/cv.pdf"
+                download="CV_MRABET_Hedi.pdf"
+                className="px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-2xl backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-purple-400 transition-all duration-500 text-center"
+              >
+                Get Resume
+              </a>
             </motion.div>
           </motion.div>
+
+          {/* === Carte code à droite (inchangée) === */}
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+            className="relative"
+          >
+            <div className="absolute -inset-4 bg-purple-600/30 rounded-3xl blur-3xl animate-pulse" />
+
+            <div className="relative bg-gray-900/90 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 shadow-2xl">
+              <div className="flex gap-3 mb-6">
+                <div className="w-3 h-3 rounded-full bg-red-500" />
+                <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                <div className="w-3 h-3 rounded-full bg-green-500" />
+              </div>
+
+              <pre className="text-green-400 font-mono text-sm md:text-base leading-relaxed overflow-x-auto whitespace-pre-wrap break-words">
+{`const coder = {
+  name: 'MRABET Hedi',
+  skills: ['OpenStack', 'Netplan', 'Ubuntu 24.04', 
+  'Terraform', 'Linux', 'Cloud Networking'],
+  hardWorker: true,
+  quickLearner: true,
+  problemSolver: true,
+  hireable: function() {
+    return (
+      this.hardWorker &&
+      this.problemSolver &&
+      this.skills.length >= 5
+    );
+  }
+};`}
+              </pre>
+
+              <div className="mt-6 flex items-center">
+                <span className="text-green-400 text-2xl animate-pulse">Block</span>
+              </div>
+            </div>
+          </motion.div>
+
         </div>
       </div>
     </section>

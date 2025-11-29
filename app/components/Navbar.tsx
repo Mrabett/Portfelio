@@ -64,7 +64,7 @@ export default function Navbar() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
               >
-                AM
+                # MRABET
               </motion.span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-500/50 group-hover:w-full transition-all duration-300" />
             </Link>

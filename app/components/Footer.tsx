@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 const socialLinks = [
   {
     name: "GitHub",
@@ -40,6 +41,12 @@ const quickLinks = [
 ];
 
 export default function Footer() {
+  const [year, setYear] = useState<number>(2024);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="relative bg-[#101010] dark:bg-black text-white">
       <div className="container max-w-7xl mx-auto px-8 lg:px-12 relative z-10">
@@ -48,7 +55,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Link href="/" className="inline-block">
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400">
-                AM
+                MH
               </span>
             </Link>
             <p className="text-gray-300 max-w-sm">
@@ -115,7 +122,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 py-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-gray-300 text-sm">
-              © {new Date().getFullYear()} Arthur Morgan. All rights reserved.
+              © {year} Arthur Morgan. All rights reserved.
             </p>
           </div>
         </div>
